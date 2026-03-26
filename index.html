@@ -1,0 +1,2939 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Family Friendly Lake Michigan Retreat | Private Sandy Beach | Sleeps 22</title>
+    <meta name="description" content="Create unforgettable family memories at this one-of-a-kind Lake Michigan retreat featuring 175 feet of private sandy beachfront near Sawyer, MI. Sleeps 22 with Main House plus Annex.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lato:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --sand-light: #F5F0E8;
+            --sand: #E8DFD0;
+            --sand-dark: #C4B49A;
+            --driftwood: #8B7D6B;
+            --driftwood-dark: #6B5D4D;
+            --ocean-light: #B8D4E3;
+            --ocean: #5B8FA8;
+            --ocean-deep: #2C5F7A;
+            --ocean-darkest: #1A3A4A;
+            --warm-white: #FDFBF7;
+            --text-dark: #2D2A26;
+            --text-medium: #5A554D;
+            --sunset-gold: #B8743E;
+            --sunset-rose: #C47B6B;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+
+        body {
+            font-family: 'Lato', sans-serif;
+            color: var(--text-dark);
+            background: var(--warm-white);
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+        }
+
+        /* ========== NAVIGATION ========== */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            padding: 1rem 2rem;
+            transition: all 0.4s ease;
+            background: transparent;
+        }
+
+        nav.scrolled {
+            background: rgba(29, 27, 24, 0.92);
+            backdrop-filter: blur(12px);
+            padding: 0.6rem 2rem;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.15);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.2rem;
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: rgba(255,255,255,0.9);
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 400;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            transition: color 0.3s;
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background: var(--sunset-gold);
+            transition: width 0.3s;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .nav-links a:hover {
+            color: var(--sunset-gold);
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 5px;
+        }
+
+        .hamburger span {
+            width: 25px;
+            height: 2px;
+            background: white;
+            transition: all 0.3s;
+        }
+
+        /* ========== HERO ========== */
+        .hero {
+            position: relative;
+            height: 100vh;
+            min-height: 600px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .hero-bg {
+            position: absolute;
+            inset: 0;
+            background: url('images/beach-sunset-fiery.jpeg') center/cover no-repeat;
+            transform: scale(1.05);
+            animation: heroZoom 20s ease-in-out infinite alternate;
+        }
+
+        @keyframes heroZoom {
+            from { transform: scale(1.05); }
+            to { transform: scale(1.12); }
+        }
+
+        .hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(
+                to bottom,
+                rgba(0,0,0,0.2) 0%,
+                rgba(0,0,0,0.1) 40%,
+                rgba(0,0,0,0.3) 70%,
+                rgba(0,0,0,0.6) 100%
+            );
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            color: white;
+            padding: 0 2rem;
+            max-width: 900px;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            font-size: 0.75rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: #87CEEB;
+            border: 1px solid #87CEEB;
+            padding: 0.5rem 1.5rem;
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+            animation: fadeInUp 1s ease 0.3s both;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.2rem, 5vw, 4rem);
+            font-weight: 700;
+            line-height: 1.15;
+            margin-bottom: 1rem;
+            text-shadow: 0 2px 30px rgba(0,0,0,0.3);
+            animation: fadeInUp 1s ease 0.5s both;
+        }
+
+        .hero-subtitle {
+            font-size: clamp(1rem, 2vw, 1.25rem);
+            font-weight: 300;
+            line-height: 1.6;
+            max-width: 650px;
+            margin: 0 auto 2rem;
+            opacity: 0.95;
+            animation: fadeInUp 1s ease 0.7s both;
+        }
+
+        .hero-stats {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            flex-wrap: wrap;
+            animation: fadeInUp 1s ease 0.9s both;
+        }
+
+        .hero-stat {
+            text-align: center;
+        }
+
+        .hero-stat-number {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            font-weight: 700;
+            display: block;
+            color: #87CEEB;
+        }
+
+        .hero-stat-label {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            opacity: 0.8;
+        }
+
+        .scroll-indicator {
+            position: absolute;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 2;
+            animation: bounce 2s ease infinite;
+        }
+
+        .scroll-indicator svg {
+            width: 30px;
+            height: 30px;
+            stroke: rgba(255,255,255,0.7);
+            fill: none;
+            stroke-width: 2;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateX(-50%) translateY(0); }
+            50% { transform: translateX(-50%) translateY(10px); }
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* ========== SECTIONS ========== */
+        section {
+            padding: 5rem 2rem;
+        }
+
+        .section-container {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .section-label {
+            font-size: 0.75rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--ocean);
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+        }
+
+        .section-title {
+            font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+            color: var(--text-dark);
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+
+        .section-intro {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--text-medium);
+            max-width: 700px;
+            font-weight: 300;
+        }
+
+        /* ========== WELCOME ========== */
+        .welcome {
+            background: var(--warm-white);
+            text-align: center;
+        }
+
+        .welcome .section-intro {
+            margin: 0 auto 3rem;
+            max-width: 750px;
+        }
+
+        .welcome-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .welcome-feature {
+            padding: 2rem 1.5rem;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.04);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .welcome-feature:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+        }
+
+        .welcome-feature-icon {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .welcome-feature h3 {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+            color: var(--text-dark);
+        }
+
+        .welcome-feature p {
+            font-size: 0.9rem;
+            color: var(--text-medium);
+            line-height: 1.6;
+        }
+
+        /* ========== FULLWIDTH IMAGE BREAK ========== */
+        .image-break {
+            position: relative;
+            height: 85vh;
+            min-height: 600px;
+            overflow: hidden;
+        }
+
+        .image-break img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center 40%;
+        }
+
+        .image-break-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.3) 100%);
+            display: flex;
+            align-items: flex-end;
+            padding: 3rem;
+        }
+
+        .image-break-text {
+            color: white;
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(1.5rem, 3vw, 2.2rem);
+            font-style: italic;
+            max-width: 600px;
+            text-shadow: 0 2px 15px rgba(0,0,0,0.3);
+        }
+
+        /* ========== BEACH SECTION ========== */
+        .beach {
+            background: linear-gradient(180deg, var(--warm-white) 0%, var(--sand-light) 100%);
+        }
+
+        .beach-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+            margin-top: 3rem;
+        }
+
+        .beach-photos {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.75rem;
+        }
+
+        .beach-photos img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            transition: transform 0.3s;
+            cursor: pointer;
+        }
+
+        .beach-photos img:hover {
+            transform: scale(1.03);
+        }
+
+        .beach-photos img:first-child {
+            grid-column: 1 / -1;
+        }
+
+        .beach-details {
+            padding: 1rem 0;
+        }
+
+        .beach-details h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: var(--ocean-deep);
+        }
+
+        .beach-list {
+            list-style: none;
+            margin-bottom: 1.5rem;
+        }
+
+        .beach-list li {
+            padding: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+            font-size: 0.95rem;
+            color: var(--text-medium);
+            line-height: 1.5;
+        }
+
+        .beach-list li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0.9rem;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: var(--ocean);
+        }
+
+        .included-items {
+            background: white;
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-top: 1.5rem;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.04);
+        }
+
+        .included-items h4 {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--ocean);
+            margin-bottom: 0.75rem;
+        }
+
+        .included-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.4rem;
+        }
+
+        .included-grid span {
+            font-size: 0.9rem;
+            color: var(--text-medium);
+            padding: 0.3rem 0;
+        }
+
+        /* ========== HOUSE SECTION ========== */
+        .house {
+            background: var(--warm-white);
+        }
+
+        .house-intro {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .house-intro .section-intro {
+            margin: 0 auto;
+        }
+
+        .house-block {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+            margin-bottom: 4rem;
+        }
+
+        .house-block.reverse {
+            direction: rtl;
+        }
+
+        .house-block.reverse > * {
+            direction: ltr;
+        }
+
+        .house-image {
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+        }
+
+        .house-image img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.5s;
+        }
+
+        .house-image:hover img {
+            transform: scale(1.03);
+        }
+
+        .house-info h3 {
+            font-size: 1.6rem;
+            color: var(--text-dark);
+            margin-bottom: 0.5rem;
+        }
+
+        .house-info .house-tagline {
+            font-style: italic;
+            color: var(--ocean);
+            margin-bottom: 1.5rem;
+            font-size: 1rem;
+        }
+
+        .room-list {
+            list-style: none;
+        }
+
+        .room-list li {
+            padding: 0.6rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+            color: var(--text-medium);
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        .room-list li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 1rem;
+            width: 8px;
+            height: 2px;
+            background: var(--sunset-gold);
+        }
+
+        .room-list li strong {
+            color: var(--text-dark);
+        }
+
+        .bedroom-cards {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .bedroom-card {
+            background: var(--sand-light);
+            border-radius: 10px;
+            padding: 1.2rem;
+            border-left: 3px solid var(--ocean);
+        }
+
+        .bedroom-card h4 {
+            font-size: 0.95rem;
+            margin-bottom: 0.4rem;
+            color: var(--text-dark);
+        }
+
+        .bedroom-card p {
+            font-size: 0.85rem;
+            color: var(--text-medium);
+            line-height: 1.5;
+        }
+
+        /* ========== ROOM GALLERY (Pro Photos) ========== */
+        .room-gallery {
+            background: var(--sand-light);
+        }
+
+        .room-gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 0.75rem;
+            margin-top: 2rem;
+        }
+
+        .room-gallery-item {
+            position: relative;
+            border-radius: 8px;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .room-gallery-item img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.4s, opacity 0.3s;
+        }
+
+        .room-gallery-item:hover img {
+            transform: scale(1.05);
+            opacity: 0.9;
+        }
+
+        .room-gallery-item .caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 2rem 0.75rem 0.75rem;
+            background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 100%);
+            color: white;
+            font-size: 0.8rem;
+            font-weight: 400;
+            letter-spacing: 0.5px;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .room-gallery-item:hover .caption,
+        .room-gallery-item .caption.always-show {
+            opacity: 1;
+        }
+
+        /* ========== FLOOR PLANS ========== */
+        .floorplans {
+            background: var(--warm-white);
+        }
+
+        .floorplan-tabs {
+            display: flex;
+            justify-content: center;
+            gap: 0.5rem;
+            margin: 2rem 0;
+            flex-wrap: wrap;
+        }
+
+        .floorplan-tab {
+            padding: 0.6rem 1.5rem;
+            border: 1px solid var(--sand-dark);
+            border-radius: 50px;
+            background: white;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--text-medium);
+            cursor: pointer;
+            transition: all 0.3s;
+            font-family: 'Lato', sans-serif;
+        }
+
+        .floorplan-tab:hover,
+        .floorplan-tab.active {
+            background: var(--ocean);
+            color: white;
+            border-color: var(--ocean);
+        }
+
+        .floorplan-content {
+            text-align: center;
+        }
+
+        .floorplan-image {
+            display: none;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .floorplan-image.active {
+            display: block;
+        }
+
+        .floorplan-image img {
+            width: 100%;
+            border-radius: 12px;
+            box-shadow: 0 4px 30px rgba(0,0,0,0.08);
+            cursor: pointer;
+        }
+
+        .floorplan-image p {
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            color: var(--text-medium);
+            font-style: italic;
+        }
+
+        /* ========== PHOTO GALLERY ========== */
+        .gallery-section {
+            background: var(--ocean-darkest);
+            padding: 4rem 2rem;
+        }
+
+        .gallery-section .section-label {
+            color: var(--sunset-gold);
+        }
+
+        .gallery-section .section-title {
+            color: white;
+            text-align: center;
+        }
+
+        .gallery-section .section-label {
+            text-align: center;
+        }
+
+        .photo-gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 0.75rem;
+            margin-top: 2rem;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .photo-gallery .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 4px;
+        }
+
+        .photo-gallery .gallery-item img {
+            width: 100%;
+            height: auto;
+            cursor: pointer;
+            transition: opacity 0.3s, transform 0.3s;
+            display: block;
+        }
+
+        .photo-gallery .gallery-item:hover img {
+            opacity: 0.85;
+            transform: scale(1.02);
+        }
+
+        .photo-gallery .gallery-item .caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 2rem 0.6rem 0.5rem;
+            background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 100%);
+            color: white;
+            font-size: 0.75rem;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .photo-gallery .gallery-item:hover .caption,
+        .photo-gallery .gallery-item .caption.always-show {
+            opacity: 1;
+        }
+
+        .photo-gallery .gallery-item.wide {
+            grid-column: span 2;
+        }
+
+        .photo-gallery .gallery-item.tall {
+            grid-row: span 2;
+        }
+
+        .photo-gallery .gallery-item.tall img {
+            height: 100%;
+        }
+
+        /* ========== KITCHEN ========== */
+        .kitchen {
+            background: var(--sand-light);
+        }
+
+        .kitchen-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 3rem;
+            align-items: center;
+            margin-top: 2rem;
+        }
+
+        .kitchen-image {
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+        }
+
+        .kitchen-image img {
+            width: 100%;
+            height: 450px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .kitchen-amenities {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1rem;
+        }
+
+        .kitchen-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem 1.25rem;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+        }
+
+        .kitchen-item-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: var(--ocean-light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1rem;
+            flex-shrink: 0;
+        }
+
+        .kitchen-item span {
+            font-size: 0.95rem;
+            color: var(--text-medium);
+        }
+
+        .seating-info {
+            background: white;
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-top: 1.5rem;
+            border-left: 3px solid var(--sunset-gold);
+        }
+
+        .seating-info h4 {
+            font-size: 0.95rem;
+            color: var(--text-dark);
+            margin-bottom: 0.5rem;
+        }
+
+        .seating-info p {
+            font-size: 0.9rem;
+            color: var(--text-medium);
+            line-height: 1.6;
+        }
+
+        /* ========== AMENITIES ========== */
+        .amenities {
+            background: var(--warm-white);
+        }
+
+        .amenities-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 3rem;
+        }
+
+        .amenity-card {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.04);
+            border-top: 3px solid var(--ocean);
+            transition: transform 0.3s;
+        }
+
+        .amenity-card:hover {
+            transform: translateY(-3px);
+        }
+
+        .amenity-card h3 {
+            font-size: 1.15rem;
+            margin-bottom: 1rem;
+            color: var(--text-dark);
+        }
+
+        .amenity-list {
+            list-style: none;
+        }
+
+        .amenity-list li {
+            padding: 0.4rem 0;
+            font-size: 0.9rem;
+            color: var(--text-medium);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .amenity-list li::before {
+            content: "\2713";
+            color: var(--ocean);
+            font-weight: 700;
+            font-size: 0.8rem;
+        }
+
+        /* ========== DOG FRIENDLY ========== */
+        .dog-friendly {
+            background: var(--sand-light);
+        }
+
+        .dog-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 1rem;
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .dog-grid img {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        }
+
+        .dog-info {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            max-width: 600px;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.04);
+        }
+
+        .dog-info h3 {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            color: var(--text-dark);
+        }
+
+        .dog-info li {
+            padding: 0.4rem 0;
+            font-size: 0.95rem;
+            color: var(--text-medium);
+            list-style: none;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .dog-info li::before {
+            content: "\1F43E";
+            position: absolute;
+            left: 0;
+            font-size: 0.8rem;
+        }
+
+        /* ========== LOCATION ========== */
+        .location {
+            background: var(--ocean-darkest);
+            color: white;
+        }
+
+        .location .section-label {
+            color: var(--sunset-gold);
+        }
+
+        .location .section-title {
+            color: white;
+        }
+
+        .location-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            margin-top: 2rem;
+        }
+
+        .location-details p {
+            font-size: 1rem;
+            color: rgba(255,255,255,0.8);
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        .location-card {
+            background: rgba(255,255,255,0.08);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .location-card h4 {
+            color: var(--sunset-gold);
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .location-card p {
+            color: rgba(255,255,255,0.7);
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        .location-image {
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .location-image img {
+            width: 100%;
+            height: 100%;
+            min-height: 300px;
+            object-fit: cover;
+        }
+
+        /* ========== PRICING ========== */
+        .pricing {
+            background: var(--warm-white);
+            text-align: center;
+        }
+
+        .pricing-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .pricing-card {
+            background: white;
+            border-radius: 16px;
+            padding: 2.5rem 2rem;
+            box-shadow: 0 4px 30px rgba(0,0,0,0.06);
+            border: 1px solid var(--sand);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .pricing-card.featured {
+            border-color: var(--ocean);
+            border-width: 2px;
+            transform: scale(1.03);
+            box-shadow: 0 8px 40px rgba(0,0,0,0.1);
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+        }
+
+        .pricing-card.featured:hover {
+            transform: scale(1.03) translateY(-4px);
+        }
+
+        .pricing-label {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--ocean);
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .pricing-amount {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--text-dark);
+        }
+
+        .pricing-period {
+            font-size: 0.9rem;
+            color: var(--text-medium);
+            margin-bottom: 1rem;
+        }
+
+        .pricing-note {
+            font-size: 0.85rem;
+            color: var(--text-medium);
+            font-style: italic;
+            margin-top: 2rem;
+        }
+
+        .pricing-deposit {
+            display: inline-block;
+            margin-top: 1.5rem;
+            padding: 0.75rem 1.5rem;
+            background: var(--sand-light);
+            border-radius: 8px;
+            font-size: 0.9rem;
+            color: var(--text-medium);
+        }
+
+        /* ========== AVAILABILITY CALENDAR ========== */
+        .calendar-wrapper {
+            max-width: 900px;
+            margin: 3rem auto 0;
+        }
+
+        .calendar-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .calendar-header h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            color: var(--text-dark);
+        }
+
+        .calendar-nav {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .calendar-nav button {
+            background: var(--ocean-light);
+            border: none;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 1rem;
+            color: var(--ocean-deep);
+            transition: background 0.3s;
+        }
+
+        .calendar-nav button:hover {
+            background: var(--ocean-deep);
+            color: white;
+        }
+
+        .calendar-months {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+
+        .calendar-month {
+            background: white;
+            border-radius: 12px;
+            padding: 1.5rem;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+        }
+
+        .calendar-month-title {
+            text-align: center;
+            font-weight: 700;
+            font-size: 1rem;
+            margin-bottom: 1rem;
+            color: var(--text-dark);
+        }
+
+        .calendar-grid {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 2px;
+            text-align: center;
+        }
+
+        .calendar-day-header {
+            font-size: 0.7rem;
+            font-weight: 600;
+            color: var(--text-medium);
+            padding: 0.3rem 0;
+            text-transform: uppercase;
+        }
+
+        .calendar-day {
+            padding: 0.45rem 0;
+            font-size: 0.85rem;
+            border-radius: 6px;
+            color: var(--text-dark);
+        }
+
+        .calendar-day.empty {
+            background: none;
+        }
+
+        .calendar-day.available {
+            background: #e8f5e9;
+            color: #2e7d32;
+        }
+
+        .calendar-day.unavailable {
+            background: #ffebee;
+            color: #c62828;
+            text-decoration: line-through;
+        }
+
+        .calendar-day.past {
+            color: #ccc;
+            background: none;
+        }
+
+        .calendar-legend {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 1.5rem;
+            font-size: 0.8rem;
+            color: var(--text-medium);
+        }
+
+        .calendar-legend span {
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+
+        .legend-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 3px;
+            display: inline-block;
+        }
+
+        .legend-dot.available {
+            background: #e8f5e9;
+            border: 1px solid #2e7d32;
+        }
+
+        .legend-dot.unavailable {
+            background: #ffebee;
+            border: 1px solid #c62828;
+        }
+
+        @media (max-width: 600px) {
+            .calendar-months {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* ========== GUIDELINES ========== */
+        .guidelines {
+            background: var(--sand-light);
+        }
+
+        .guidelines-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .guideline-card {
+            background: white;
+            border-radius: 12px;
+            padding: 1.5rem;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.03);
+        }
+
+        .guideline-card h4 {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--ocean);
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid var(--sand);
+        }
+
+        .guideline-card li {
+            list-style: none;
+            padding: 0.5rem 0;
+            font-size: 0.9rem;
+            color: var(--text-medium);
+            padding-left: 1.2rem;
+            position: relative;
+        }
+
+        .guideline-card li::before {
+            content: "\2022";
+            position: absolute;
+            left: 0;
+            color: var(--driftwood);
+        }
+
+        .stairs-note {
+            background: white;
+            border-radius: 12px;
+            padding: 1.5rem 2rem;
+            margin-top: 2rem;
+            border-left: 4px solid var(--sunset-rose);
+            box-shadow: 0 2px 15px rgba(0,0,0,0.03);
+        }
+
+        .stairs-note p {
+            font-size: 0.9rem;
+            color: var(--text-medium);
+            line-height: 1.6;
+        }
+
+        /* ========== SUNSET GALLERY ========== */
+        .sunset-gallery {
+            background: var(--text-dark);
+            padding: 0;
+            position: relative;
+        }
+
+        .sunset-slider {
+            display: flex;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: none;
+        }
+
+        .sunset-slider::-webkit-scrollbar {
+            display: none;
+        }
+
+        .sunset-slide {
+            min-width: 100%;
+            height: 60vh;
+            min-height: 400px;
+            scroll-snap-align: start;
+            position: relative;
+        }
+
+        .sunset-slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .sunset-slide-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.5) 0%, transparent 50%);
+            display: flex;
+            align-items: flex-end;
+            padding: 3rem;
+        }
+
+        .sunset-slide-text {
+            color: white;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            font-style: italic;
+            opacity: 0.9;
+        }
+
+        .slider-dots {
+            position: absolute;
+            bottom: 1.5rem;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 0.5rem;
+            z-index: 5;
+        }
+
+        .slider-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.4);
+            cursor: pointer;
+            border: none;
+            transition: background 0.3s;
+        }
+
+        .slider-dot.active {
+            background: white;
+        }
+
+        /* ========== CONTACT ========== */
+        .contact {
+            background: linear-gradient(135deg, var(--ocean-deep) 0%, var(--ocean-darkest) 100%);
+            color: white;
+            text-align: center;
+        }
+
+        .contact .section-label {
+            color: var(--sunset-gold);
+        }
+
+        .contact .section-title {
+            color: white;
+        }
+
+        .contact .section-intro {
+            color: rgba(255,255,255,0.8);
+            margin: 0 auto 3rem;
+        }
+
+        .contact-cards {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+        }
+
+        .contact-card {
+            background: rgba(255,255,255,0.1);
+            border: 1px solid rgba(255,255,255,0.15);
+            border-radius: 16px;
+            padding: 2rem 2.5rem;
+            text-align: center;
+            backdrop-filter: blur(10px);
+            min-width: 250px;
+            transition: background 0.3s;
+        }
+
+        .contact-card:hover {
+            background: rgba(255,255,255,0.15);
+        }
+
+        .contact-icon {
+            font-size: 1.5rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .contact-card h3 {
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+            color: white;
+        }
+
+        .contact-card a {
+            color: var(--sunset-gold);
+            text-decoration: none;
+            font-size: 1.05rem;
+            transition: color 0.3s;
+        }
+
+        .contact-card a:hover {
+            color: white;
+        }
+
+        .contact-card p {
+            color: rgba(255,255,255,0.7);
+            font-size: 0.85rem;
+            margin-top: 0.5rem;
+        }
+
+        .contact-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            margin-bottom: 2rem;
+            color: rgba(255,255,255,0.9);
+        }
+
+        .contact-cta {
+            display: inline-block;
+            padding: 1rem 3rem;
+            background: var(--sunset-gold);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            transition: background 0.3s, transform 0.3s;
+            margin-top: 1rem;
+        }
+
+        .contact-cta:hover {
+            background: var(--sunset-rose);
+            transform: translateY(-2px);
+        }
+
+        /* ========== FOOTER ========== */
+        footer {
+            background: var(--text-dark);
+            color: rgba(255,255,255,0.5);
+            text-align: center;
+            padding: 2rem;
+            font-size: 0.8rem;
+        }
+
+        footer a {
+            color: var(--sunset-gold);
+            text-decoration: none;
+        }
+
+        /* ========== LIGHTBOX ========== */
+        .lightbox {
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.95);
+            z-index: 2000;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            cursor: zoom-out;
+        }
+
+        .lightbox.active {
+            display: flex;
+        }
+
+        .lightbox img {
+            max-width: 90vw;
+            max-height: 90vh;
+            object-fit: contain;
+            border-radius: 4px;
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: 1.5rem;
+            right: 1.5rem;
+            color: white;
+            font-size: 2rem;
+            cursor: pointer;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.1);
+            border: none;
+            transition: background 0.3s;
+        }
+
+        .lightbox-close:hover {
+            background: rgba(255,255,255,0.2);
+        }
+
+        .lightbox-caption {
+            position: absolute;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            color: white;
+            font-size: 1rem;
+            text-align: center;
+            max-width: 80%;
+            text-shadow: 0 1px 5px rgba(0,0,0,0.5);
+        }
+
+        /* ========== EDIT MODE ========== */
+        .edit-toggle {
+            position: fixed;
+            bottom: 1.5rem;
+            right: 1.5rem;
+            z-index: 1500;
+            background: var(--ocean-deep);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            padding: 0.8rem 1.5rem;
+            font-size: 0.85rem;
+            font-weight: 600;
+            cursor: pointer;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+            transition: background 0.3s, transform 0.3s;
+            font-family: 'Lato', sans-serif;
+            display: none;
+        }
+
+        .edit-toggle:hover {
+            background: var(--ocean);
+            transform: translateY(-2px);
+        }
+
+        .edit-toggle.active {
+            background: var(--sunset-rose);
+        }
+
+        body.edit-mode .edit-toggle {
+            display: block;
+        }
+
+        body.edit-mode .gallery-item,
+        body.edit-mode .room-gallery-item {
+            cursor: grab;
+            outline: 2px dashed transparent;
+            transition: outline-color 0.2s;
+        }
+
+        body.edit-mode .gallery-item:hover,
+        body.edit-mode .room-gallery-item:hover {
+            outline-color: var(--sunset-gold);
+        }
+
+        body.edit-mode .gallery-item.dragging,
+        body.edit-mode .room-gallery-item.dragging {
+            opacity: 0.5;
+            cursor: grabbing;
+        }
+
+        body.edit-mode .caption {
+            opacity: 1 !important;
+        }
+
+        body.edit-mode .caption-edit-hint {
+            display: block;
+        }
+
+        .caption-edit-hint {
+            display: none;
+            font-size: 0.65rem;
+            opacity: 0.7;
+            margin-top: 0.25rem;
+        }
+
+        .edit-banner {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1100;
+            background: var(--sunset-gold);
+            color: white;
+            text-align: center;
+            padding: 0.5rem;
+            font-size: 0.85rem;
+            font-weight: 600;
+            display: none;
+        }
+
+        body.edit-mode .edit-banner {
+            display: block;
+        }
+
+        body.edit-mode nav {
+            top: 2rem;
+        }
+
+        /* ========== SCROLL ANIMATIONS ========== */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ========== MOBILE STYLES ========== */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: rgba(29, 27, 24, 0.97);
+                flex-direction: column;
+                padding: 1.5rem 2rem;
+                gap: 1rem;
+            }
+
+            .nav-links.open {
+                display: flex;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            section {
+                padding: 3.5rem 1.5rem;
+            }
+
+            .beach-grid,
+            .house-block,
+            .kitchen-grid,
+            .location-grid,
+            .guidelines-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .house-block.reverse {
+                direction: ltr;
+            }
+
+            .dog-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .photo-gallery,
+            .room-gallery-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .photo-gallery .gallery-item.wide {
+                grid-column: span 1;
+            }
+
+            .hero-stats {
+                gap: 1.5rem;
+            }
+
+            .bedroom-cards {
+                grid-template-columns: 1fr;
+            }
+
+            .pricing-card.featured {
+                transform: none;
+            }
+
+            .pricing-card.featured:hover {
+                transform: translateY(-4px);
+            }
+
+            .welcome-features {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .welcome-features {
+                grid-template-columns: 1fr;
+            }
+
+            .photo-gallery,
+            .room-gallery-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-cards {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Edit Mode Banner -->
+    <div class="edit-banner">EDIT MODE: Drag photos to reorder. Click a photo caption to edit it. Click "Save Changes" when done.</div>
+
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo">Lake Michigan Retreat</a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#beach">Beach</a></li>
+                <li><a href="#house">House</a></li>
+                <li><a href="#rooms">Rooms</a></li>
+                <li><a href="#floorplans">Floor Plans</a></li>
+                <li><a href="#kitchen">Kitchen</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero" id="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <div class="hero-badge">Say Yes to Michigan</div>
+            <h1>Family Friendly Lake Michigan Retreat</h1>
+            <p class="hero-subtitle">Create unforgettable family memories at this one-of-a-kind lakefront retreat featuring 175 feet of truly private sandy beach on a quiet, secluded lane.</p>
+            <div class="hero-stats">
+                <div class="hero-stat">
+                    <span class="hero-stat-number">22</span>
+                    <span class="hero-stat-label">Guests</span>
+                </div>
+                <div class="hero-stat">
+                    <span class="hero-stat-number">8</span>
+                    <span class="hero-stat-label">Bedrooms</span>
+                </div>
+                <div class="hero-stat">
+                    <span class="hero-stat-number">7</span>
+                    <span class="hero-stat-label">Bathrooms</span>
+                </div>
+                <div class="hero-stat">
+                    <span class="hero-stat-number">175</span>
+                    <span class="hero-stat-label">Ft. of Beach</span>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        </div>
+    </section>
+
+    <!-- Welcome -->
+    <section class="welcome" id="welcome">
+        <div class="section-container fade-in">
+            <p class="section-label">Welcome</p>
+            <h2 class="section-title">Your Private Lakefront Escape</h2>
+            <p class="section-subtitle" style="font-style: italic; color: var(--text-medium); margin-bottom: 1rem; font-size: 1.1rem;">Located between New Buffalo and Sawyer, Michigan</p>
+            <p class="section-intro">With a Main House connected by decks to the Annex accommodations, generous indoor and outdoor gathering spaces, and a gradual sandy entry into the water, this property is thoughtfully set up for family vacations, multi-generational trips, and relaxed time together by the lake.</p>
+            <div class="welcome-features">
+                <div class="welcome-feature">
+                    <div class="welcome-feature-icon">&#127754;</div>
+                    <h3>Private Beach</h3>
+                    <p>175 feet of sandy Lake Michigan shoreline all to yourself, with no public access.</p>
+                </div>
+                <div class="welcome-feature">
+                    <div class="welcome-feature-icon">&#127968;</div>
+                    <h3>Two Houses</h3>
+                    <p>Main House plus Annex connected by decks, offering privacy and togetherness.</p>
+                </div>
+                <div class="welcome-feature">
+                    <div class="welcome-feature-icon">&#127773;</div>
+                    <h3>Stunning Sunsets</h3>
+                    <p>Fabulous west-facing sunset evenings over Lake Michigan that will take your breath away.</p>
+                </div>
+                <div class="welcome-feature">
+                    <div class="welcome-feature-icon">&#128054;</div>
+                    <h3>Dog Friendly</h3>
+                    <p>Up to 3 well-trained dogs welcome to join the family vacation fun.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Image Break -->
+    <div class="image-break">
+        <img src="images/stairs-to-beach.jpeg" alt="Private wooden stairs with handrails leading down to the sandy beach">
+        <div class="image-break-overlay">
+            <p class="image-break-text">"Enjoy peaceful mornings on the deck, long beach days on the sand, and fabulous sunset evenings."</p>
+        </div>
+    </div>
+
+    <!-- Beach Section -->
+    <section class="beach" id="beach">
+        <div class="section-container">
+            <p class="section-label fade-in">The Beach</p>
+            <h2 class="section-title fade-in">A Beach Made for Families</h2>
+
+            <div class="beach-grid">
+                <div class="beach-photos fade-in">
+                    <img src="images/beach-child-paraglider.jpeg" alt="Wide sandy beach with paraglider and blue sky" class="lightbox-trigger">
+                    <img src="images/sunset-swim.jpeg" alt="Golden hour on the beach with sunset, sand, and water" class="lightbox-trigger">
+                    <img src="images/kayaking-calm.jpeg" alt="Kayaking on calm turquoise Lake Michigan" class="lightbox-trigger">
+                    <img src="images/kite-beach.jpeg" alt="Kite flying on the beach" class="lightbox-trigger">
+                    <img src="images/beach-sunset-wide.jpeg" alt="Sunset over the beach with sand and waves" class="lightbox-trigger">
+                </div>
+                <div class="beach-details fade-in">
+                    <h3>Your Own Private Shoreline</h3>
+                    <ul class="beach-list">
+                        <li>175 feet of private sandy Lake Michigan beach</li>
+                        <li>Gradual walk-in water entry, perfect for children</li>
+                        <li>Private wooden stairs with handrails to the beach</li>
+                        <li>About 100 steps (3 stories) with built-in benches for rest breaks</li>
+                        <li>Secluded location with no public beach access</li>
+                        <li>Miles of beach for walking</li>
+                        <li>Build your own private beach bonfire</li>
+                        <li>Outdoor deck shower for rinsing off after beach days</li>
+                    </ul>
+                    <div class="included-items">
+                        <h4>Included Beach Fun</h4>
+                        <div class="included-grid">
+                            <span>2 Paddleboards</span>
+                            <span>2 Kayaks</span>
+                            <span>Floating Water Mat</span>
+                            <span>Beach Toys</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sunset Slider -->
+    <div class="sunset-gallery">
+        <div class="sunset-slider" id="sunsetSlider">
+            <div class="sunset-slide">
+                <img src="images/sunset-vibrant.jpeg" alt="Vibrant sunset through the trees from the deck">
+                <div class="sunset-slide-overlay">
+                    <p class="sunset-slide-text">Every evening brings a new masterpiece</p>
+                </div>
+            </div>
+            <div class="sunset-slide">
+                <img src="images/starry-night.jpeg" alt="Stunning red sunset with sun reflecting on calm Lake Michigan">
+                <div class="sunset-slide-overlay">
+                    <p class="sunset-slide-text">The sun dips into Lake Michigan in a blaze of color</p>
+                </div>
+            </div>
+            <div class="sunset-slide">
+                <img src="images/sunset-golden.jpeg" alt="Golden sunset over the calm lake">
+                <div class="sunset-slide-overlay">
+                    <p class="sunset-slide-text">Golden hour at its finest, every single day</p>
+                </div>
+            </div>
+            <div class="sunset-slide">
+                <img src="images/beach-sunset-fiery.jpeg" alt="Fiery red and orange sunset over the beach with sand and waves">
+                <div class="sunset-slide-overlay">
+                    <p class="sunset-slide-text">Sunsets that paint the sky in unforgettable colors</p>
+                </div>
+            </div>
+        </div>
+        <div class="slider-dots" id="sliderDots">
+            <button class="slider-dot active" onclick="goToSlide(0)"></button>
+            <button class="slider-dot" onclick="goToSlide(1)"></button>
+            <button class="slider-dot" onclick="goToSlide(2)"></button>
+            <button class="slider-dot" onclick="goToSlide(3)"></button>
+        </div>
+    </div>
+
+    <!-- House Section -->
+    <section class="house" id="house">
+        <div class="section-container">
+            <div class="house-intro fade-in">
+                <p class="section-label">The Property</p>
+                <h2 class="section-title">Main House Plus Annex, Designed for Togetherness</h2>
+                <p class="section-intro">Ideal for extended families or families traveling together. Plenty of space to gather, with room to spread out. The two structures are connected by decks, making it easy to move between spaces while still offering privacy when needed.</p>
+            </div>
+
+            <!-- Main House -->
+            <div class="house-block fade-in">
+                <div class="house-image">
+                    <img src="images/pro-living-dining-overview.jpg" alt="Spacious open living and dining area with vaulted ceilings and lake-view windows">
+                </div>
+                <div class="house-info">
+                    <h3>The Main House</h3>
+                    <p class="house-tagline">The heart of the retreat</p>
+                    <ul class="room-list">
+                        <li><strong>5 bedrooms</strong> (including detached king) plus a small walk-through den</li>
+                        <li><strong>4 full bathrooms</strong></li>
+                        <li>Cozy <strong>stone fireplace</strong> for evening gatherings</li>
+                        <li>Spacious living and dining areas</li>
+                        <li>Large deck and <strong>screened-in porch</strong> with lake views</li>
+                        <li><strong>Detached king bedroom</strong> connected via covered outdoor walkway</li>
+                        <li>Strongest WiFi coverage on the property</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Main House Bedrooms -->
+            <div class="fade-in" style="margin-bottom: 4rem;">
+                <h3 style="font-size: 1.3rem; margin-bottom: 1.5rem; color: var(--ocean-deep); text-align: center;">Main House Bedrooms</h3>
+                <div class="bedroom-cards">
+                    <div class="bedroom-card">
+                        <h4>Primary Suite</h4>
+                        <p>Queen bed, private en-suite bath, and lakefront balcony</p>
+                    </div>
+                    <div class="bedroom-card">
+                        <h4>Queen Room</h4>
+                        <p>Queen bed with sink and peaceful woods view</p>
+                    </div>
+                    <div class="bedroom-card">
+                        <h4>Lake View Room</h4>
+                        <p>Queen bed, sink, daybed, lake view, and space for a Pack 'n Play</p>
+                    </div>
+                    <div class="bedroom-card">
+                        <h4>Family Room</h4>
+                        <p>1 queen and 2 twin beds, lake view. Connected to a small walk-through den</p>
+                    </div>
+                    <div class="bedroom-card">
+                        <h4>Detached King</h4>
+                        <p>King bed, connected to main house via covered outdoor walkway. Full bathroom just 4 steps away.</p>
+                    </div>
+                </div>
+                <p style="text-align: center; margin-top: 1rem; font-size: 0.9rem; color: var(--text-medium);">Two full hall bathrooms on the second floor (one includes the only bathtub on the property).</p>
+            </div>
+
+            <!-- Annex -->
+            <div class="house-block reverse fade-in">
+                <div class="house-image">
+                    <img src="images/pro-annex-living-kitchen.jpg" alt="Annex sitting room with kitchenette, light blue walls, and comfortable seating">
+                </div>
+                <div class="house-info">
+                    <h3>The Annex</h3>
+                    <p class="house-tagline">A wonderful option for grandparents, adult children, or a second family</p>
+                    <ul class="room-list">
+                        <li><strong>2 king bedrooms</strong>, each with its own en-suite full bathroom with shower</li>
+                        <li><strong>1 bunk room</strong> with six bunks and attached full bathroom with shower</li>
+                        <li><strong>3 full bathrooms</strong> total</li>
+                        <li>Small <strong>kitchenette</strong> with adjacent sitting room</li>
+                        <li>TV and lounge room</li>
+                        <li><strong>Air conditioning</strong> throughout</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Room-by-Room Gallery (Pro Photos) -->
+    <section class="room-gallery" id="rooms">
+        <div class="section-container">
+            <p class="section-label fade-in" style="text-align: center;">Room by Room</p>
+            <h2 class="section-title fade-in" style="text-align: center;">Every Room, Every Detail</h2>
+            <p class="section-intro fade-in" style="text-align: center; margin: 0 auto 2rem;">Every space in both houses. Click any photo to see it full size.</p>
+
+            <h3 class="fade-in" style="font-size: 1.1rem; text-transform: uppercase; letter-spacing: 2px; color: var(--ocean-deep); margin-bottom: 1rem; text-align: center;">Main House</h3>
+            <div class="room-gallery-grid fade-in" id="mainHouseGallery">
+                <div class="room-gallery-item" data-caption="Screened-in porch">
+                    <img src="images/pro-screened-porch.jpg" alt="Screened-in porch with wicker furniture" class="lightbox-trigger">
+                    <div class="caption always-show">Screened-in porch</div>
+                </div>
+                <div class="room-gallery-item" data-caption="Living &amp; dining overview">
+                    <img src="images/pro-living-dining-overview.jpg" alt="Open living and dining area" class="lightbox-trigger">
+                    <div class="caption always-show">Living &amp; dining overview</div>
+                </div>
+                <div class="room-gallery-item" data-caption="Living room &amp; fireplace">
+                    <img src="images/pro-living-room-fireplace.jpg" alt="Living room with stone fireplace" class="lightbox-trigger">
+                    <div class="caption always-show">Living room &amp; fireplace</div>
+                </div>
+                <div class="room-gallery-item" data-caption="Dining area">
+                    <img src="images/pro-dining-kitchen.jpg" alt="Dining area and kitchen" class="lightbox-trigger">
+                    <div class="caption always-show">Dining area</div>
+                </div>
+                <div class="room-gallery-item" data-caption="Kitchen island &amp; bar">
+                    <img src="images/pro-kitchen-island.jpg" alt="Kitchen breakfast bar" class="lightbox-trigger">
+                    <div class="caption always-show">Kitchen island &amp; bar</div>
+                </div>
+                <div class="room-gallery-item" data-caption="Kitchen">
+                    <img src="images/pro-kitchen-staircase.jpg" alt="Kitchen with staircase" class="lightbox-trigger">
+                    <div class="caption always-show">Kitchen</div>
+                </div>
+                <div class="room-gallery-item" data-caption="Kitchen countertops">
+                    <img src="images/pro-kitchen-countertops.jpg" alt="Quartz countertops" class="lightbox-trigger">
+                    <div class="caption always-show">Kitchen countertops</div>
+                </div>
+                <div class="room-gallery-item" data-caption="Primary suite">
+                    <img src="images/pro-primary-bedroom.jpg" alt="Primary bedroom" class="lightbox-trigger">
+                    <div class="caption always-show">Primary suite</div>
+                </div>
+                <div class="room-gallery-item" data-caption="Primary suite - balcony view">
+                    <img src="images/pro-primary-bedroom-windows.jpg" alt="Primary bedroom with vaulted ceilings" class="lightbox-trigger">
+                    <div class="caption always-show">Primary suite - balcony view</div>
+                </div>
+                <div class="room-gallery-item" data-caption="Primary bathroom">
+                    <img src="images/pro-primary-bathroom.jpg" alt="Primary bathroom with shower" class="lightbox-trigger">
+                    <div class="caption always-show">Primary bathroom</div>
+                </div>
+                <div class="room-gallery-item" data-caption="Queen bedroom">
+                    <img src="images/pro-bedroom-queen-white.jpg" alt="Queen bedroom with white bedding" class="lightbox-trigger">
+                    <div class="caption always-show">Queen bedroom</div>
+                </div>
+                <div class="room-gallery-item" data-caption="Lake view room with sink and daybed">
+                    <img src="images/pro-queen-bedroom-quilt.jpg" alt="Lake view room with queen bed and patchwork quilt" class="lightbox-trigger">
+                    <div class="caption always-show">Lake view room with sink and daybed</div>
+                </div>
+                <div class="room-gallery-item" data-caption="Lake view room with sink and daybed">
+                    <img src="images/pro-daybed-room.jpg" alt="Lake view room daybed area with lighthouse art" class="lightbox-trigger">
+                    <div class="caption always-show">Lake view room with sink and daybed</div>
+                </div>
+                <div class="room-gallery-item" data-caption="Lake view room - closet &amp; dresser">
+                    <img src="images/pro-queen-bedroom-quilt2.jpg" alt="Lake view room showing closet, yellow dresser, and lighthouse art" class="lightbox-trigger">
+                    <div class="caption always-show">Lake view room - closet &amp; dresser</div>
+                </div>
+                <div class="room-gallery-item" data-caption="Family room - queen &amp; twins">
+                    <img src="images/pro-family-bedroom.jpg" alt="Family bedroom with queen and twin beds" class="lightbox-trigger">
+                    <div class="caption always-show">Family room - queen &amp; twins</div>
+                </div>
+                <div class="room-gallery-item" data-caption="Den / sitting area">
+                    <img src="images/pro-den-sitting.jpg" alt="Den with leather recliners" class="lightbox-trigger">
+                    <div class="caption always-show">Den / sitting area</div>
+                </div>
+                <div class="room-gallery-item" data-caption="Den - TV area">
+                    <img src="images/pro-den-tv.jpg" alt="Den with TV, vintage radio, and movie poster collage" class="lightbox-trigger">
+                    <div class="caption always-show">Den - TV area</div>
+                </div>
+                <div class="room-gallery-item" data-caption="Hallway">
+                    <img src="images/pro-upstairs-landing.jpg" alt="Upstairs landing with vintage art" class="lightbox-trigger">
+                    <div class="caption always-show">Hallway</div>
+                </div>
+                <div class="room-gallery-item" data-caption="Hallway">
+                    <img src="images/pro-hallway-bedroom.jpg" alt="Hallway" class="lightbox-trigger">
+                    <div class="caption always-show">Hallway</div>
+                </div>
+                <div class="room-gallery-item" data-caption="Hallway">
+                    <img src="images/pro-hallway-art.jpg" alt="Hallway" class="lightbox-trigger">
+                    <div class="caption always-show">Hallway</div>
+                </div>
+                <div class="room-gallery-item" data-caption="Bathroom">
+                    <img src="images/pro-bathroom-main-tub.jpg" alt="Bathroom" class="lightbox-trigger">
+                    <div class="caption always-show">Bathroom</div>
+                </div>
+                <div class="room-gallery-item" data-caption="Bathroom with tub">
+                    <img src="images/pro-bathroom-floral.jpg" alt="Bathroom with tub" class="lightbox-trigger">
+                    <div class="caption always-show">Bathroom with tub</div>
+                </div>
+                <div class="room-gallery-item" data-caption="Bathroom with fish art">
+                    <img src="images/pro-bathroom-fish.jpg" alt="Bathroom with fish artwork and shower" class="lightbox-trigger">
+                    <div class="caption always-show">Bathroom with fish art</div>
+                </div>
+                <div class="room-gallery-item" data-caption="Laundry">
+                    <img src="images/pro-mudroom-laundry.jpg" alt="Mudroom and laundry area" class="lightbox-trigger">
+                    <div class="caption always-show">Laundry</div>
+                </div>
+                <div class="room-gallery-item" data-caption="Detached king bedroom">
+                    <img src="images/detached-king1.jpeg" alt="Detached king bedroom with quilt, leather chair, and window views" class="lightbox-trigger">
+                    <div class="caption always-show">Detached king bedroom</div>
+                </div>
+                <div class="room-gallery-item" data-caption="Detached king bedroom">
+                    <img src="images/detached-king2.jpeg" alt="Detached king bedroom with quilt and French doors" class="lightbox-trigger">
+                    <div class="caption always-show">Detached king bedroom</div>
+                </div>
+            </div>
+
+            <h3 class="fade-in" style="font-size: 1.1rem; text-transform: uppercase; letter-spacing: 2px; color: var(--ocean-deep); margin: 3rem 0 1rem; text-align: center;">The Annex</h3>
+            <div class="room-gallery-grid fade-in" id="annexGallery">
+                <div class="room-gallery-item" data-caption="Annex sitting room &amp; kitchenette">
+                    <img src="images/pro-annex-living-kitchen.jpg" alt="Annex sitting room and kitchenette" class="lightbox-trigger">
+                    <div class="caption always-show">Annex sitting room &amp; kitchenette</div>
+                </div>
+                <div class="room-gallery-item" data-caption="Annex sitting room &amp; kitchenette">
+                    <img src="images/pro-annex-kitchen-view.jpg" alt="Annex sitting room and kitchenette, another view" class="lightbox-trigger">
+                    <div class="caption always-show">Annex sitting room &amp; kitchenette</div>
+                </div>
+                <div class="room-gallery-item" data-caption="King bedroom 1 with en-suite bath">
+                    <img src="images/pro-annex-king-bedroom1.jpg" alt="Annex king bedroom with seashell bedding and en-suite bathroom" class="lightbox-trigger">
+                    <div class="caption always-show">King bedroom 1 with en-suite bath</div>
+                </div>
+                <div class="room-gallery-item" data-caption="King bedroom 1 - en-suite bath">
+                    <img src="images/pro-annex-bathroom1.jpg" alt="Annex king bedroom 1 en-suite bathroom with shower" class="lightbox-trigger">
+                    <div class="caption always-show">King bedroom 1 - en-suite bath</div>
+                </div>
+                <div class="room-gallery-item" data-caption="King bedroom 2 with en-suite bath">
+                    <img src="images/pro-annex-king-bedroom2.jpg" alt="Annex king bedroom with tropical bedding and en-suite bathroom" class="lightbox-trigger">
+                    <div class="caption always-show">King bedroom 2 with en-suite bath</div>
+                </div>
+                <div class="room-gallery-item" data-caption="King bedroom 2 - en-suite bath">
+                    <img src="images/pro-annex-king-bedroom2b.jpg" alt="King bedroom showing attached en-suite bathroom" class="lightbox-trigger">
+                    <div class="caption always-show">King bedroom 2 - en-suite bath</div>
+                </div>
+                <div class="room-gallery-item" data-caption="Bunk room (sleeps 6)">
+                    <img src="images/pro-annex-bunk-room.jpg" alt="Bunk room with six bunks" class="lightbox-trigger">
+                    <div class="caption always-show">Bunk room (sleeps 6)</div>
+                </div>
+                <div class="room-gallery-item" data-caption="TV &amp; lounge room">
+                    <img src="images/pro-annex-tv-room.jpg" alt="Annex TV and lounge room" class="lightbox-trigger">
+                    <div class="caption always-show">TV &amp; lounge room</div>
+                </div>
+                <div class="room-gallery-item" data-caption="TV &amp; lounge room - seating">
+                    <img src="images/pro-annex-tv-room2.jpg" alt="Annex TV room with armchair, striped rug, and bathroom doorway" class="lightbox-trigger">
+                    <div class="caption always-show">TV &amp; lounge room - seating</div>
+                </div>
+                <div class="room-gallery-item" data-caption="Annex bathroom">
+                    <img src="images/pro-annex-bathroom2.jpg" alt="Annex bathroom with shower" class="lightbox-trigger">
+                    <div class="caption always-show">Annex bathroom</div>
+                </div>
+                <div class="room-gallery-item" data-caption="Annex laundry">
+                    <img src="images/pro-annex-laundry.jpg" alt="Annex laundry room with washer and dryer" class="lightbox-trigger">
+                    <div class="caption always-show">Annex laundry</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Floor Plans -->
+    <section class="floorplans" id="floorplans">
+        <div class="section-container">
+            <p class="section-label fade-in" style="text-align: center;">Floor Plans</p>
+            <h2 class="section-title fade-in" style="text-align: center;">See the Full Layout</h2>
+
+            <div class="floorplan-tabs fade-in">
+                <button class="floorplan-tab active" onclick="showFloorplan('main-deck')">Main House Deck Level</button>
+                <button class="floorplan-tab" onclick="showFloorplan('main-2nd')">Main House 2nd Floor</button>
+                <button class="floorplan-tab" onclick="showFloorplan('annex-deck')">Annex Deck Level</button>
+                <button class="floorplan-tab" onclick="showFloorplan('annex-ground')">Annex Ground Floor</button>
+            </div>
+
+            <div class="floorplan-content fade-in">
+                <div class="floorplan-image active" id="fp-main-deck">
+                    <img src="images/floorplan-main-deck.jpg" alt="Main House Deck Level - Kitchen, Dining, Living Room, Screened-In Porch, Detached Bedroom" class="lightbox-trigger">
+                    <p>Main House Deck Level &mdash; Kitchen, Dining Area, Living Room, Detached King Bedroom, Deck &amp; Screened-In Porch (1,544 sq ft)</p>
+                </div>
+                <div class="floorplan-image" id="fp-main-2nd">
+                    <img src="images/floorplan-main-2nd-new.jpg" alt="Main House 2nd Floor - Primary Suite, Bedrooms, Bathrooms" class="lightbox-trigger">
+                    <p>Main House 2nd Floor &mdash; Primary Suite, 3 Bedrooms, Den, Bathrooms (1,367 sq ft)</p>
+                </div>
+                <div class="floorplan-image" id="fp-annex-deck">
+                    <img src="images/floorplan-annex-deck.jpg" alt="Annex Deck Level - Sitting Room, Bedrooms, Kitchenette" class="lightbox-trigger">
+                    <p>Annex Deck Level &mdash; Sitting Room, 2 King Bedrooms with En-Suite Baths, Kitchenette (842 sq ft)</p>
+                </div>
+                <div class="floorplan-image" id="fp-annex-ground">
+                    <img src="images/floorplan-annex-ground.jpg" alt="Annex Ground Floor - Family Room, Bedroom, Laundry" class="lightbox-trigger">
+                    <p>Annex Ground Floor &mdash; Family Room, King Bedroom with Bath, Laundry, Utility (613 sq ft)</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Photo Gallery -->
+    <section class="gallery-section">
+        <div class="section-container">
+            <p class="section-label fade-in">Gallery</p>
+            <h2 class="section-title fade-in">Life at the Lake</h2>
+        </div>
+        <div class="photo-gallery fade-in" id="lifeGallery">
+            <!-- Horizontal photos: Row pattern 1-2-1-2-0 sunsets -->
+            <!-- Row 1: daytime, SUNSET, daytime -->
+            <div class="gallery-item">
+                <img src="images/deck-lake-view.jpeg" alt="Lake view from the deck" class="lightbox-trigger">
+            </div>
+            <div class="gallery-item">
+                <img src="images/sunset-trees.jpeg" alt="Sunset through the trees" class="lightbox-trigger">
+            </div>
+            <div class="gallery-item">
+                <img src="images/house-exterior-2.png" alt="House from the driveway" class="lightbox-trigger">
+            </div>
+            <!-- Row 2: SUNSET, daytime, SUNSET -->
+            <div class="gallery-item">
+                <img src="images/gallery-4857.jpeg" alt="Sunset over the lake with swimmers" class="lightbox-trigger">
+            </div>
+            <div class="gallery-item">
+                <img src="images/gallery-kids-floating.jpeg" alt="Kids floating on the lake" class="lightbox-trigger">
+            </div>
+            <div class="gallery-item">
+                <img src="images/porch-sunset-view.jpeg" alt="Twilight through the windows" class="lightbox-trigger">
+            </div>
+            <!-- Row 3: daytime, SUNSET, daytime -->
+            <div class="gallery-item">
+                <img src="images/kitchen-main.jpeg" alt="Kitchen with island" class="lightbox-trigger">
+            </div>
+            <div class="gallery-item">
+                <img src="images/gallery-4866.jpeg" alt="Twilight over the lake" class="lightbox-trigger">
+            </div>
+            <div class="gallery-item">
+                <img src="images/beach-tent-dog.jpeg" alt="Dog at the beach" class="lightbox-trigger">
+            </div>
+            <!-- Row 4: SUNSET, daytime, SUNSET -->
+            <div class="gallery-item">
+                <img src="images/gallery-8299.jpeg" alt="Sunset through tree trunks" class="lightbox-trigger">
+            </div>
+            <div class="gallery-item">
+                <img src="images/beach-sign-flowers.jpeg" alt="Beach sign with flowers" class="lightbox-trigger">
+            </div>
+            <div class="gallery-item">
+                <img src="images/gallery-4875.jpeg" alt="Direction signpost at sunset" class="lightbox-trigger">
+            </div>
+            <!-- Row 5: all daytime -->
+            <div class="gallery-item">
+                <img src="images/stairs-flowers.jpeg" alt="View down stairs to the beach" class="lightbox-trigger">
+            </div>
+            <div class="gallery-item">
+                <img src="images/gallery-8422.jpeg" alt="Wooded driveway" class="lightbox-trigger">
+            </div>
+            <div class="gallery-item">
+                <img src="images/deck-dogs-man.jpeg" alt="Lake view through the trees" class="lightbox-trigger">
+            </div>
+            <!-- Vertical photos -->
+            <div class="gallery-item">
+                <img src="images/gallery-9041.jpeg" alt="House exterior with flowers" class="lightbox-trigger">
+            </div>
+            <div class="gallery-item">
+                <img src="images/gallery-deck-dining.jpeg" alt="Deck dining area" class="lightbox-trigger">
+            </div>
+            <div class="gallery-item">
+                <img src="images/interior-dog-windows.jpeg" alt="Interior with lake-view windows" class="lightbox-trigger">
+            </div>
+            <div class="gallery-item">
+                <img src="images/deck-seating.jpeg" alt="Deck with flowers and seating" class="lightbox-trigger">
+            </div>
+            <div class="gallery-item">
+                <img src="images/deck-lake-sailboat.jpeg" alt="Lake view with sailboat" class="lightbox-trigger">
+            </div>
+            <div class="gallery-item">
+                <img src="images/gallery-deck-lakeview.jpeg" alt="Deck table with lake view" class="lightbox-trigger">
+            </div>
+            <div class="gallery-item">
+                <img src="images/gallery-3587.jpeg" alt="Dog running to the beach" class="lightbox-trigger">
+            </div>
+            <div class="gallery-item">
+                <img src="images/sunset-deck.jpeg" alt="Sunset from the deck" class="lightbox-trigger">
+            </div>
+            <div class="gallery-item">
+                <img src="images/welcome-beach.jpeg" alt="Sparkling shoreline" class="lightbox-trigger">
+            </div>
+            <div class="gallery-item">
+                <img src="images/beach-walk.jpeg" alt="Hummingbird at feeder" class="lightbox-trigger">
+            </div>
+            <div class="gallery-item">
+                <img src="images/living-room-family.jpeg" alt="Sunset through the living room windows" class="lightbox-trigger">
+            </div>
+            <div class="gallery-item">
+                <img src="images/gallery-sunset-trees.jpeg" alt="Sunset through the trees" class="lightbox-trigger">
+            </div>
+            <div class="gallery-item">
+                <img src="images/sunset-through-windows.jpeg" alt="Sunset through the windows" class="lightbox-trigger">
+            </div>
+            <div class="gallery-item">
+                <img src="images/sunset-pink-red.jpeg" alt="View from the sunroom" class="lightbox-trigger">
+            </div>
+            <div class="gallery-item">
+                <img src="images/starry-sky.jpeg" alt="Starry night sky" class="lightbox-trigger">
+            </div>
+        </div>
+    </section>
+
+    <!-- Kitchen -->
+    <section class="kitchen" id="kitchen">
+        <div class="section-container">
+            <p class="section-label fade-in">Kitchen & Dining</p>
+            <h2 class="section-title fade-in">Gather, Cook, and Share Meals Together</h2>
+
+            <div class="kitchen-grid fade-in">
+                <div class="kitchen-image">
+                    <img src="images/pro-kitchen-countertops.jpg" alt="Beautiful kitchen with quartz countertops and stainless appliances">
+                </div>
+                <div>
+                    <div class="kitchen-amenities">
+                        <div class="kitchen-item">
+                            <div class="kitchen-item-icon">&#127859;</div>
+                            <span>Full-size refrigerator/freezer</span>
+                        </div>
+                        <div class="kitchen-item">
+                            <div class="kitchen-item-icon">&#129482;</div>
+                            <span>Separate ice maker</span>
+                        </div>
+                        <div class="kitchen-item">
+                            <div class="kitchen-item-icon">&#127863;</div>
+                            <span>Beverage fridge</span>
+                        </div>
+                        <div class="kitchen-item">
+                            <div class="kitchen-item-icon">&#127858;</div>
+                            <span>Oven, toaster, microwave</span>
+                        </div>
+                        <div class="kitchen-item">
+                            <div class="kitchen-item-icon">&#127830;</div>
+                            <span>Outdoor gas grill and griddle</span>
+                        </div>
+                        <div class="kitchen-item">
+                            <div class="kitchen-item-icon">&#9749;</div>
+                            <span>Drip coffee maker</span>
+                        </div>
+                    </div>
+                    <div class="seating-info">
+                        <h4>Dining Seating</h4>
+                        <p>Main house dining table seats 10. Breakfast bar seats 3. Outdoor upper deck seats 6, lower deck seats 6.</p>
+                    </div>
+                    <div class="seating-info" style="margin-top: 1rem;">
+                        <h4>Stocked Kitchen</h4>
+                        <p>Kitchen is stocked with pots, pans, cooking utensils, seasonings, salt and pepper, and basic essentials for easy meal prep during your stay.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Image Break 2 -->
+    <div class="image-break">
+        <img src="images/dogs-on-deck.png" alt="Three dogs relaxing on the deck at sunset">
+        <div class="image-break-overlay">
+            <p class="image-break-text">"Everyone can enjoy time together."</p>
+        </div>
+    </div>
+
+    <!-- Amenities -->
+    <section class="amenities" id="amenities">
+        <div class="section-container">
+            <p class="section-label fade-in">Comfort & Amenities</p>
+            <h2 class="section-title fade-in">Everything You Need for a Perfect Stay</h2>
+
+            <div class="amenities-grid fade-in">
+                <div class="amenity-card">
+                    <h3>Comfort</h3>
+                    <ul class="amenity-list">
+                        <li>Air conditioning in both houses</li>
+                        <li>Stone fireplace in main house</li>
+                        <li>WiFi (best in main house)</li>
+                        <li>Two TV screens (one in each house)</li>
+                        <li>DVD player with family-friendly movies</li>
+                    </ul>
+                </div>
+                <div class="amenity-card">
+                    <h3>Practical</h3>
+                    <ul class="amenity-list">
+                        <li>Two washers and two dryers</li>
+                        <li>One set in each house</li>
+                        <li>Outdoor deck shower</li>
+                        <li>Ample parking</li>
+                        <li>Full-size kitchen plus kitchenette</li>
+                    </ul>
+                </div>
+                <div class="amenity-card">
+                    <h3>Beach & Water</h3>
+                    <ul class="amenity-list">
+                        <li>2 paddleboards with paddles</li>
+                        <li>2 kayaks</li>
+                        <li>Floating water mat</li>
+                        <li>Beach toys</li>
+                        <li>Outdoor gas grill and griddle</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dog Friendly -->
+    <section class="dog-friendly" id="dogs">
+        <div class="section-container">
+            <p class="section-label fade-in">Dog Friendly</p>
+            <h2 class="section-title fade-in">Bring the Whole Family</h2>
+
+            <div class="dog-grid fade-in">
+                <img src="images/dogs-beach.jpeg" alt="Dogs on the sandy beach" class="lightbox-trigger">
+                <img src="images/dogs-running-beach.jpeg" alt="Dogs running on the beach" class="lightbox-trigger">
+                <img src="images/dog-stairs-beach.jpeg" alt="Dog on the wooden stairs" class="lightbox-trigger">
+            </div>
+
+            <div class="dog-info fade-in">
+                <h3>Dog Guidelines</h3>
+                <ul>
+                    <li>Up to 3 well-trained dogs welcome</li>
+                    <li>Dogs must be leashed while on the beach</li>
+                    <li>Please clean up after pets</li>
+                    <li>Be respectful of neighbors and wildlife</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location -->
+    <section class="location" id="location">
+        <div class="section-container">
+            <p class="section-label fade-in">Location</p>
+            <h2 class="section-title fade-in">Convenient Yet Secluded</h2>
+
+            <div class="location-grid fade-in">
+                <div class="location-details">
+                    <p>Tucked away on a quiet, private lane near Sawyer, Michigan, this retreat offers the perfect balance of seclusion and convenience.</p>
+                    <div class="location-card">
+                        <h4>Sawyer, MI</h4>
+                        <p>Short drive for groceries and casual dining</p>
+                    </div>
+                    <div class="location-card">
+                        <h4>New Buffalo, MI</h4>
+                        <p>Approximately 15 minutes for larger grocery stores, shopping, and dining</p>
+                    </div>
+                    <div class="location-card">
+                        <h4>The Setting</h4>
+                        <p>Easy access to shops and restaurants while enjoying a peaceful, private lakefront setting. Neighbors on each side with their own private beach and access.</p>
+                    </div>
+                </div>
+                <div class="location-image">
+                    <img src="images/beach-paddleboard.jpeg" alt="Beach scene with paddleboard and family">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing -->
+    <section class="pricing" id="pricing">
+        <div class="section-container">
+            <p class="section-label fade-in">Pricing</p>
+            <h2 class="section-title fade-in">Rates & Booking</h2>
+
+            <div class="pricing-cards fade-in">
+                <div class="pricing-card">
+                    <p class="pricing-label">Nightly Rate</p>
+                    <p class="pricing-amount">$3,000</p>
+                    <p class="pricing-period">per night</p>
+                </div>
+                <div class="pricing-card featured">
+                    <p class="pricing-label">Weekly Rate</p>
+                    <p class="pricing-amount">$21,000</p>
+                    <p class="pricing-period">per week (7-night minimum stay)</p>
+                </div>
+            </div>
+
+            <p class="pricing-note fade-in">7-day minimum Memorial Day &ndash; Labor Day. 3-day minimum rest of the year.</p>
+            <p class="pricing-note fade-in">Option to rent main house on its own; pricing negotiable.</p>
+            <p class="pricing-note fade-in">Winter pricing may vary. Contact us for seasonal availability and rates.</p>
+            <p class="pricing-deposit fade-in">Security deposit: $3,000 (refundable)</p>
+
+            <div class="calendar-wrapper fade-in">
+                <div class="calendar-header">
+                    <h3>Availability</h3>
+                    <div class="calendar-nav">
+                        <button onclick="changeCalendarMonth(-2)" aria-label="Previous">&larr;</button>
+                        <button onclick="changeCalendarMonth(2)" aria-label="Next">&rarr;</button>
+                    </div>
+                </div>
+                <div class="calendar-months" id="calendarMonths"></div>
+                <div class="calendar-legend">
+                    <span><span class="legend-dot available"></span> Available</span>
+                    <span><span class="legend-dot unavailable"></span> Unavailable</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Guidelines -->
+    <section class="guidelines" id="guidelines">
+        <div class="section-container">
+            <p class="section-label fade-in">House Guidelines</p>
+            <h2 class="section-title fade-in">To Keep It Enjoyable for Everyone</h2>
+
+            <div class="guidelines-grid fade-in">
+                <div class="guideline-card">
+                    <h4>Stay Requirements</h4>
+                    <ul>
+                        <li>7-day minimum Memorial Day &ndash; Labor Day; 3-day minimum rest of the year</li>
+                        <li>Primary renter must be 25 years or older</li>
+                        <li>$3,000 security deposit (equal to one night's stay)</li>
+                        <li>Maximum occupancy: 22 guests, with no more than 14 adults</li>
+                    </ul>
+                </div>
+                <div class="guideline-card">
+                    <h4>Property Rules</h4>
+                    <ul>
+                        <li>No parties or events</li>
+                        <li>Only registered guests allowed</li>
+                        <li>Limited day visitors permitted with prior approval</li>
+                        <li>Quiet hours for children, dogs, music, and loud conversation 10pm - 8am</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="stairs-note fade-in">
+                <p><strong>Please note:</strong> The main floor of both structures is up one staircase. The beach is accessed via approximately 100 wooden steps (3 stories) with built-in benches and handrails.</p>
+            </div>
+
+            <p class="fade-in" style="text-align: center; margin-top: 2rem; font-size: 1rem; color: var(--text-medium); font-style: italic; max-width: 700px; margin-left: auto; margin-right: auto; line-height: 1.7;">This home is best suited for families seeking a calm, respectful lakefront getaway where kids can play, grandparents can relax, dogs can join the fun, and everyone can enjoy time together.</p>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="contact" id="contact">
+        <div class="section-container">
+            <p class="section-label fade-in">Get in Touch</p>
+            <h2 class="section-title fade-in">Ready to Book Your Retreat?</h2>
+            <p class="section-intro fade-in">We'd love to help you plan the perfect lakefront vacation. Reach out to us for availability, questions, or to start your reservation.</p>
+
+            <p class="contact-name fade-in">Beth Mullins Scales</p>
+
+            <div class="contact-cards fade-in">
+                <div class="contact-card">
+                    <div class="contact-icon">&#9993;</div>
+                    <h3>Email</h3>
+                    <a href="mailto:beth.mullins@gmail.com">beth.mullins@gmail.com</a>
+                    <p>We typically respond within 24 hours</p>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon">&#128222;</div>
+                    <h3>Phone</h3>
+                    <a href="tel:+13126231945">(312) 623-1945</a>
+                    <p>Call or text anytime</p>
+                </div>
+            </div>
+
+            <a href="mailto:beth.mullins@gmail.com?subject=Lake Michigan Retreat - Booking Inquiry" class="contact-cta fade-in">Inquire About Availability</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>Family Friendly Lake Michigan Retreat &mdash; Sawyer, Michigan</p>
+        <p style="margin-top: 0.5rem;">Private Sandy Beach &bull; Sleeps 22 &bull; Main House + Annex</p>
+    </footer>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+        <button class="lightbox-close">&times;</button>
+        <img id="lightboxImg" src="" alt="Full size photo">
+        <div class="lightbox-caption" id="lightboxCaption"></div>
+    </div>
+
+    <!-- Edit Mode Toggle Button -->
+    <button class="edit-toggle" id="editToggle" onclick="saveEditChanges()">Save Changes</button>
+
+    <script>
+        // Navigation scroll effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 80) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Mobile menu
+        function toggleMenu() {
+            document.getElementById('navLinks').classList.toggle('open');
+        }
+
+        // Close mobile menu on link click
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('navLinks').classList.remove('open');
+            });
+        });
+
+        // Scroll animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+        // Lightbox
+        document.querySelectorAll('.lightbox-trigger').forEach(img => {
+            img.addEventListener('click', (e) => {
+                if (document.body.classList.contains('edit-mode')) return;
+                document.getElementById('lightboxImg').src = img.src;
+                const item = img.closest('[data-caption]');
+                const caption = item ? item.getAttribute('data-caption') : '';
+                document.getElementById('lightboxCaption').textContent = caption;
+                document.getElementById('lightbox').classList.add('active');
+                document.body.style.overflow = 'hidden';
+            });
+        });
+
+        function closeLightbox() {
+            document.getElementById('lightbox').classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeLightbox();
+        });
+
+        // Availability Calendar
+        const unavailableDates = [
+            { year: 2026, month: 6, start: 17, end: 24 },  // July 17-24, 2026 (month is 0-indexed)
+            { year: 2026, month: 8, start: 4, end: 7 }     // September 4-7, 2026
+        ];
+
+        let calendarStartMonth = new Date().getMonth();
+        let calendarStartYear = new Date().getFullYear();
+
+        function isUnavailable(year, month, day) {
+            return unavailableDates.some(d =>
+                d.year === year && d.month === month && day >= d.start && day <= d.end
+            );
+        }
+
+        function renderMonth(year, month) {
+            const monthNames = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+            const daysInMonth = new Date(year, month + 1, 0).getDate();
+            const firstDay = new Date(year, month, 1).getDay();
+            const today = new Date();
+            today.setHours(0,0,0,0);
+
+            let html = '<div class="calendar-month">';
+            html += '<div class="calendar-month-title">' + monthNames[month] + ' ' + year + '</div>';
+            html += '<div class="calendar-grid">';
+
+            ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'].forEach(d => {
+                html += '<div class="calendar-day-header">' + d + '</div>';
+            });
+
+            for (let i = 0; i < firstDay; i++) {
+                html += '<div class="calendar-day empty"></div>';
+            }
+
+            for (let day = 1; day <= daysInMonth; day++) {
+                const date = new Date(year, month, day);
+                let cls = 'calendar-day';
+                if (date < today) {
+                    cls += ' past';
+                } else if (isUnavailable(year, month, day)) {
+                    cls += ' unavailable';
+                } else {
+                    cls += ' available';
+                }
+                html += '<div class="' + cls + '">' + day + '</div>';
+            }
+
+            html += '</div></div>';
+            return html;
+        }
+
+        function renderCalendar() {
+            const container = document.getElementById('calendarMonths');
+            let m1 = calendarStartMonth;
+            let y1 = calendarStartYear;
+            let m2 = m1 + 1;
+            let y2 = y1;
+            if (m2 > 11) { m2 = 0; y2++; }
+            container.innerHTML = renderMonth(y1, m1) + renderMonth(y2, m2);
+        }
+
+        function changeCalendarMonth(delta) {
+            calendarStartMonth += delta;
+            while (calendarStartMonth > 11) { calendarStartMonth -= 12; calendarStartYear++; }
+            while (calendarStartMonth < 0) { calendarStartMonth += 12; calendarStartYear--; }
+            renderCalendar();
+        }
+
+        renderCalendar();
+
+        // Sunset slider
+        const slider = document.getElementById('sunsetSlider');
+        const dots = document.querySelectorAll('.slider-dot');
+        let currentSlide = 0;
+        let autoSlideInterval;
+
+        function goToSlide(index) {
+            currentSlide = index;
+            const slideWidth = slider.querySelector('.sunset-slide').offsetWidth;
+            slider.scrollTo({ left: slideWidth * index, behavior: 'smooth' });
+            updateDots();
+            resetAutoSlide();
+        }
+
+        function updateDots() {
+            dots.forEach((dot, i) => {
+                dot.classList.toggle('active', i === currentSlide);
+            });
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % 5;
+            goToSlide(currentSlide);
+        }
+
+        function resetAutoSlide() {
+            clearInterval(autoSlideInterval);
+            autoSlideInterval = setInterval(nextSlide, 5000);
+        }
+
+        autoSlideInterval = setInterval(nextSlide, 5000);
+
+        slider.addEventListener('scroll', () => {
+            const slideWidth = slider.querySelector('.sunset-slide').offsetWidth;
+            const newIndex = Math.round(slider.scrollLeft / slideWidth);
+            if (newIndex !== currentSlide) {
+                currentSlide = newIndex;
+                updateDots();
+            }
+        });
+
+        // Parallax effect on hero
+        window.addEventListener('scroll', () => {
+            const scrolled = window.scrollY;
+            const hero = document.querySelector('.hero-bg');
+            if (scrolled < window.innerHeight) {
+                hero.style.transform = `scale(${1.05 + scrolled * 0.0002}) translateY(${scrolled * 0.3}px)`;
+            }
+        });
+
+        // Floor plan tabs
+        function showFloorplan(id) {
+            document.querySelectorAll('.floorplan-image').forEach(fp => fp.classList.remove('active'));
+            document.querySelectorAll('.floorplan-tab').forEach(tab => tab.classList.remove('active'));
+            document.getElementById('fp-' + id).classList.add('active');
+            event.target.classList.add('active');
+        }
+
+        // ==========================================
+        // EDIT MODE - Photo rearranging & labeling
+        // ==========================================
+
+        // Enter edit mode with ?edit=true in the URL
+        if (window.location.search.includes('edit=true')) {
+            document.body.classList.add('edit-mode');
+            initEditMode();
+        }
+
+        function initEditMode() {
+            // Make all gallery grids sortable
+            const galleries = document.querySelectorAll('.room-gallery-grid, .photo-gallery');
+            galleries.forEach(gallery => {
+                makeGallerySortable(gallery);
+            });
+
+            // Make captions editable
+            document.querySelectorAll('.room-gallery-item .caption, .gallery-item .caption').forEach(caption => {
+                caption.style.cursor = 'text';
+                caption.setAttribute('contenteditable', 'true');
+                caption.addEventListener('blur', function() {
+                    const item = this.closest('[data-caption]');
+                    if (item) {
+                        item.setAttribute('data-caption', this.textContent);
+                    }
+                    saveToLocalStorage();
+                });
+                caption.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                });
+            });
+
+            // Load saved arrangement from localStorage
+            loadFromLocalStorage();
+        }
+
+        function makeGallerySortable(gallery) {
+            let draggedItem = null;
+
+            gallery.querySelectorAll('.room-gallery-item, .gallery-item').forEach(item => {
+                item.setAttribute('draggable', 'true');
+
+                item.addEventListener('dragstart', function(e) {
+                    draggedItem = this;
+                    this.classList.add('dragging');
+                    e.dataTransfer.effectAllowed = 'move';
+                });
+
+                item.addEventListener('dragend', function() {
+                    this.classList.remove('dragging');
+                    draggedItem = null;
+                    gallery.querySelectorAll('.room-gallery-item, .gallery-item').forEach(i => {
+                        i.style.borderTop = '';
+                        i.style.borderLeft = '';
+                    });
+                    saveToLocalStorage();
+                });
+
+                item.addEventListener('dragover', function(e) {
+                    e.preventDefault();
+                    e.dataTransfer.dropEffect = 'move';
+                    if (this !== draggedItem) {
+                        this.style.borderLeft = '3px solid var(--sunset-gold)';
+                    }
+                });
+
+                item.addEventListener('dragleave', function() {
+                    this.style.borderLeft = '';
+                });
+
+                item.addEventListener('drop', function(e) {
+                    e.preventDefault();
+                    this.style.borderLeft = '';
+                    if (this !== draggedItem && draggedItem) {
+                        const allItems = [...gallery.children];
+                        const draggedIdx = allItems.indexOf(draggedItem);
+                        const droppedIdx = allItems.indexOf(this);
+                        if (draggedIdx < droppedIdx) {
+                            gallery.insertBefore(draggedItem, this.nextSibling);
+                        } else {
+                            gallery.insertBefore(draggedItem, this);
+                        }
+                    }
+                });
+            });
+        }
+
+        function saveToLocalStorage() {
+            const data = {};
+            document.querySelectorAll('.room-gallery-grid, .photo-gallery').forEach(gallery => {
+                const id = gallery.id;
+                if (!id) return;
+                const items = [];
+                gallery.querySelectorAll('.room-gallery-item, .gallery-item').forEach(item => {
+                    const img = item.querySelector('img');
+                    items.push({
+                        src: img ? img.getAttribute('src') : '',
+                        caption: item.getAttribute('data-caption') || '',
+                        className: item.className
+                    });
+                });
+                data[id] = items;
+            });
+            localStorage.setItem('michigan-gallery-data', JSON.stringify(data));
+        }
+
+        function loadFromLocalStorage() {
+            const saved = localStorage.getItem('michigan-gallery-data');
+            if (!saved) return;
+            try {
+                const data = JSON.parse(saved);
+                Object.keys(data).forEach(galleryId => {
+                    const gallery = document.getElementById(galleryId);
+                    if (!gallery) return;
+                    const savedItems = data[galleryId];
+                    const currentItems = [...gallery.querySelectorAll('.room-gallery-item, .gallery-item')];
+
+                    // Map current items by image src
+                    const itemMap = {};
+                    currentItems.forEach(item => {
+                        const img = item.querySelector('img');
+                        if (img) itemMap[img.getAttribute('src')] = item;
+                    });
+
+                    // Reorder and update captions
+                    savedItems.forEach(savedItem => {
+                        const item = itemMap[savedItem.src];
+                        if (item) {
+                            item.setAttribute('data-caption', savedItem.caption);
+                            const caption = item.querySelector('.caption');
+                            if (caption) caption.textContent = savedItem.caption;
+                            gallery.appendChild(item);
+                        }
+                    });
+                });
+            } catch(e) {
+                console.log('Could not load saved gallery arrangement');
+            }
+        }
+
+        function saveEditChanges() {
+            saveToLocalStorage();
+            const btn = document.getElementById('editToggle');
+            btn.textContent = 'Saved!';
+            btn.style.background = '#4CAF50';
+            setTimeout(() => {
+                btn.textContent = 'Save Changes';
+                btn.style.background = '';
+            }, 2000);
+        }
+
+        // Also load saved captions/order on normal page view
+        (function() {
+            const saved = localStorage.getItem('michigan-gallery-data');
+            if (!saved) return;
+            try {
+                const data = JSON.parse(saved);
+                Object.keys(data).forEach(galleryId => {
+                    const gallery = document.getElementById(galleryId);
+                    if (!gallery) return;
+                    const savedItems = data[galleryId];
+                    const currentItems = [...gallery.querySelectorAll('.room-gallery-item, .gallery-item')];
+                    const itemMap = {};
+                    currentItems.forEach(item => {
+                        const img = item.querySelector('img');
+                        if (img) itemMap[img.getAttribute('src')] = item;
+                    });
+                    savedItems.forEach(savedItem => {
+                        const item = itemMap[savedItem.src];
+                        if (item) {
+                            item.setAttribute('data-caption', savedItem.caption);
+                            const caption = item.querySelector('.caption');
+                            if (caption) caption.textContent = savedItem.caption;
+                            gallery.appendChild(item);
+                        }
+                    });
+                });
+            } catch(e) {}
+        })();
+    </script>
+
+</body>
+</html>
